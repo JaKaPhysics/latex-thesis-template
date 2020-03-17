@@ -1,3 +1,14 @@
 
 *.aux
 .DS_Store
+thesis.bbl
+*.blg
+*.loe
+*.lof
+*.log
+*.lol
+*.lot
+*.out
+*.gz
+*.tdo
+*.toc
