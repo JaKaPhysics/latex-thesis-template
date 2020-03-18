@@ -33,6 +33,10 @@
 % do not align bottom of pages
 \raggedbottom
 
+% set table caption to be on top of tables
+\usepackage{floatrow}
+\floatsetup[table]{capposition=top}
+
 % set style of captions
 \setcapindent{0pt} % do not indent second line of captions
 \setkomafont{caption}{\small}
@@ -47,6 +51,7 @@
 
 % load the color package and enable colored tables
 \usepackage[table]{xcolor}
+\usepackage{booktabs}
 
 % define new environment for zebra tables
 \newcommand{\mainrowcolors}{\rowcolors{1}{maincolor!25}{maincolor!5}}
@@ -63,7 +68,8 @@
 
 % do not print numbers next to each formula
 \usepackage{mathtools}
-\mathtoolsset{showonlyrefs}
+%\mathtoolsset{showonlyrefs}
+
 % left align formulas
 \makeatletter
 \@fleqntrue\let\mathindent\@mathmargin \@mathmargin=\leftmargini
@@ -139,6 +145,9 @@
 \usepackage{amsthm}
 \usepackage{thmtools}
 \usepackage{amssymb}
+
+% load SI unit package for beautiful units
+\usepackage{siunitx}
 
 % load the paralist library to use compactitem and compactenum environment
 \usepackage{paralist}

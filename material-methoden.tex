@@ -3,11 +3,11 @@
 \chapter{Material und Methoden}
 \label{chapter:material-methoden}
 
-In diesem Kapitel wird die eigentliche Erkenntnis dieser Arbeit beschrieben. Der Aufbau dieses Kapitels hängt stark vom Thema der Arbeit ab. Die in dieser Vorlage vorgeschlagenen Kapitel sind auch nur als Vorschlag und auf keinen Fall als verbindlich zu verstehen.
+In diesem Abschnitt sollte konkret und nachvollziehbar beschrieben werden, wie die Untersuchungen durchgeführt wurden. So sollte zusätzlich zu einer Auflistung der verwendeten Materialien (Chemikalien und Geräte inkl. eventueller Messungenauigkeiten und Firmennamen) beschrieben werden, wie beispielsweise Proben hergestellt wurden (z.B. Konzentrationen, Verdünnungsreihen, etc.) und mit welchen Parametern Geräte verwendet wurden (z.B. erforderliche Zeit im Ultraschallbad, Porengröße der Extrudermembran). \textbf{Die durchgeführten  Arbeiten müssen hierbei durch andere reproduzierbar sein.}
 
-Die folgenden Abschnitte dieses Kapitels enthalten Beispiele für die diversen Inhaltselemente einer Arbeit.\todo{Die Abschnitte dieses Kapitels sollten natürlich nicht so in die Arbeit übernommen werden.}
+Die folgenden Abschnitte dieses Kapitels enthalten Beispiele für die diversen Inhaltselemente einer Arbeit.\todo{Die Abschnitte dieses Kapitels sollten natürlich nicht so in die Arbeit übernommen werden. Für die finale Version können diese Todo-Notes dann komplett aufgeblendet werden}
 
-\todo[inline]{Notizen an einen selbst oder den Betreuer der Arbeit sind während der Arbeit sehr nützlich. Für die finale Version können diese Todo-Notes dann komplett aufgeblendet werden.}
+\todo[inline]{Notizen an einen selbst oder den Betreuer der Arbeit sind während der Arbeit sehr nützlich.}
 
 \section{Quellen}
 
@@ -26,37 +26,53 @@ Quellen sind wichtig für gutes wissenschaftliches Arbeiten. Eine Quelle kann da
 
 Dabei ist zu beachten, dass nicht veröffentlichte Artikel und insbesondere Webseiten nur in Ausnahmefällen gute Quellen sind, da diese nicht durch Fachleute begutachtet wurden.
 
-Im Bereich der Informatik können Quellenangaben im Bib\TeX-Format direkt der dblp\footnote{zum Beispiel \url{http://dblp.uni-trier.de}} entnommen werden.
+In den meisten Fällen können Quellenangaben im Bib\TeX-Format direkt in verschiedenen Suchmaschinen\footnote{zum Beispiel Google Scholar (\url{https://scholar.google.com/}) oder PubMed (\url{https://www.ncbi.nlm.nih.gov/pubmed/})} für wissenschaftliche Texte entnommen werden.
 
 \section{Tabellen}
 
-In \vref{tbl-prozessoren} sehen wir ein Beispiel für eine Tabelle.
+In \vref{tbl:prozessoren} sehen wir ein Beispiel für eine Tabelle. Im Gegensatz zu Abbildungen und Diagrammen ist die Beschriftung einer Tabelle immer oberhalb positioniert.
 
 \begin{table}
+
   \centering
-  \begin{zebratabular}{llr}
+  \begin{tabular}{llr}
     \headerrow Jahr & Prozessor & MHz \\
-    1975 & 6502 (C64) & 1 \\
-    1985 & 80386 & 16 \\
-    2005 & Pentium 4 & 2\,800 \\
-    2030 & Phoenix 3 & 7\,320\,000 \\
+    1975 & 6502 (C64) 	& 1 \\
+    1985 & 80386 			& 16 \\
+    2005 & Pentium 4 	& 2\,800 \\
+    2030 & Phoenix 3 	& 7\,320\,000 \\
     \hiderowcolors
     2050 & \ldots \\
     2070 & \ldots
-  \end{zebratabular}
+  \end{tabular}
   \caption[Rechengeschwindigkeit von Computern]{Rechengeschwindigkeit von Computern. Inhaltlich vollkommen egal, ist dies doch ein sehr schönes Beispiel für eine Tabelle.}
-  \label{tbl-prozessoren}
+  \label{tbl:prozessoren}
 \end{table}
 
 \section{Abbildungen und Diagramme}
 
-In \vref{fig-flower} sehen wir ein Beispiel für eine Abbildung, die aus einer externen Grafik geladen wurde. In \vref{fig-buechi} sehen wir ein Beispiel für eine Abbildung, die in \LaTeX\ generiert wurde.
+In \vref{fig:flower} sehen wir ein Beispiel für eine Abbildung, die aus einer externen Grafik geladen wurde. In \vref{fig:buechi} sehen wir ein Beispiel für eine Abbildung, die in mit Hilfe von TiKz in \LaTeX\ generiert wurde.
+
+%\item \textbf{Abbildungen und Tabellen:}\begin{itemize}
+%	\item Abbildungen und Tabellen werden fortlaufend nummeriert und immer beschriftet. 
+%	\item Die Beschriftung von Abbildungen erfolgt unterhalb der Abbildung. Die Beschriftung von Tabellen erfolgt oberhalb der Tabelle.
+%	\item Auf jede Abbildung und Tabelle wird mindestens einmal im Text verwiesen.
+%	\item Die Beschriftungen der Graphen sollten so ausf�hrlich sein, dass die Ergebnisse einer Arbeit auch nur mit den Bildern verst�ndlich sind!
+%	\item Von Anfang an auf die Gr��e von Graphen und deren Beschriftung achten (am besten ist, den Graph in der Gr��e zu erstellen, in der er ins Skript kommt). \textbf{Schriftgr��e} im Graphen an \textbf{Text anpassen}, nicht zu klein oder zu gro�!
+%	\end{itemize}
+%\item \textbf{Zitate und Quellenangaben:}\begin{itemize}
+%	\item W�rtlich �bernommene Texte werden durch Anf�hrungsstriche kenntlich gemacht und vom restlichen Text abgesetzt.
+%	\item Formulieren Sie nach M�glichkeit alles in eigenen Worten.
+%	\item Literaturstellen werden fortlaufend nummeriert und und in eckigen Klammern hinter die entsprechende Textstelle gesetzt (am Satzende vor dem Punkt). 
+%	\item Die Quellen stehen am Ende der Arbeit in einem Literaturverzeichnis in der Reihenfolge der vergebenen Nummern.
+%	\end{itemize}
+%\end{itemize}
 
 \begin{figure}
   \centering
   \pgfimage[width=.5\textwidth]{flower}
-  \caption[Kurzfassung der Beschreibung für das Abbildungsverzeichnis]{Lange Version der Beschreibung, die direkt unter der Abbildung gesetzt wird. Es ist wichtig, für jede Abbildung eine umfangreiche Beschreibung anzugeben, da der Leser beim ersten Durchblättern der Arbeit vor allem an den Abbildungen hängen bleibt.}
-  \label{fig-flower}
+  \caption[Kurzfassung der Beschreibung für das Abbildungsverzeichnis]{Lange Version der Beschreibung, die direkt unter der Abbildung gesetzt wird. Es ist wichtig, für jede Abbildung eine umfangreiche Beschreibung anzugeben, da der Leser beim ersten Durchblättern der Arbeit vor allem an den Abbildungen hängen bleibt. Am Besten sollte so die Abbildung mit der dazugehörigen Bildunterschrift ohne weiteren Text verständlich sein und für sich alleine stehen können.}
+  \label{fig:flower}
 \end{figure}
 
 \begin{figure}
@@ -73,7 +89,7 @@ In \vref{fig-flower} sehen wir ein Beispiel für eine Abbildung, die aus einer e
       (q0) edge node {$a$} (q1);
   \end{tikzpicture}
   \caption[Graph des Büchi-Automaten $\hat A$.]{Graph des Büchi-Automaten $\hat A$. Der Zustand $q_1$ hat dabei keine ausgehende Kante. Der Zustand ist trotzdem akzeptierend, da beide enthaltenen Zustände von $\acute A$ akzeptierend sind. Die naive Anwendung des Leerheitstests auf alternierenden Büchi-Automaten liefert in diesem Fall also zu viele akzeptierende Zustände.}
-  \label{fig-buechi}
+  \label{fig:buechi}
 \end{figure}
 
 \section{Quelltext}
@@ -104,17 +120,6 @@ Manchmal möchte man Quelltext eher als Abbildung und nicht als Fließtext behan
 
 Wenn man Quelltext mit Bildunterschrift setzt, muss man darauf achten, dass der Quelltext nach wie vor nicht als Fließumgebung behandelt wird. Entsprechend kann es passieren, dass der Quelltext über zwei Seiten hinweg gesetzt wird. Während das normalerweise nicht stört, kann dieser Umstand in Zusammenhang mit einer Bildunterschrift den Leser irritieren.
 
-\section{Pseudocode}
-
-Um Algorithmen zu erklären ist Pseudocode viel besser geeignet als Quelltext. Im Pseudocode kann man alles unwichtige weglassen und sich auf die mathematische Modellierung des Algorithmus konzentrieren. So kann die Struktur des Verfahrens unabhängig von Implementierungsdetails des jeweiligen Frameworks erklärt werden.
-
-\begin{lstlisting}[style=pseudo,gobble=2]
-  // Schleife von 1 bis 5
-    for $i \gets 1$ to $5$ do
-      while $S[i] \neq S[S[i]]$ do
-        $S[i] \gets S[S[i]]$
-\end{lstlisting}
-
 \section{Formeln mit \pdfepsilon}
 
 Das $\epsilon$ in der Überschrift dieses Abschnitts ist ein Beispiel für ein mathematisches Symbol, dass in den PDF-Lesezeichen als reiner Text gesetzt wird. Siehe \texttt{macros.tex}. In dieser Datei wird auch $n \in \N$ definiert.
@@ -130,48 +135,21 @@ Nullstellen bei
 \end{align}
 hat.
 
-\section{Theoreme}
+%\item \textbf{Zahlen und Einheiten:}\begin{itemize}
+%	\item Physikalische \textbf{Gr��en} sind in Formeln und im Flie�text \textbf{kursiv}, z. B. Temperatur $T$ und Zeit $t$. 
+%	\item \textbf{Indices} von physikalischen Gr��en, die keine Variablen sind, sind \textbf{nicht kursiv}, z. B. $T_{\rm{1}}$, Zeit $t_{\rm{off}}$ (hingegen $T_x$ oder $T_i$). 
+%	\item Einheitenbehaftete Zahlen werden immer mit ihrer Einheit geschrieben.
+%	\item Zwischen Zahl und Einheit steht ein gesch�tztes Leerzeichen. Ein gesch�tztes Leerzeichen verhindert, dass Zahl und Einheit in unterschiedlichen Zeilen stehen und f�gt immer den gleichen Abstand zwischen Zahl und Einheit ein.
+%	\item \textbf{Einheiten} werden \textbf{nicht kursiv} geschrieben. 
+%	\item \textbf{Einheiten} werden bei der Beschriftung von Graphen oder in Tabellen \textbf{nicht in eckige Klammern} gesetzt. Bsp: $c$ in nM oder $c /$ mM!
+%	\end{itemize}
 
-\begin{Definition}[Definition]
-  Eine \emph{Definition} ist die Bestimmung eines Begriffs oder eines mathematischen Zusammenhangs.
-\end{Definition}
+\section{Hinweise zu Form und Stil}
 
-\begin{Lemma}[Unwichtiger Hilfssatz]
-  \label{lem:hilfssatz}
-  Der Satz \ldots
-\end{Lemma}
-
-\begin{proof}
-  \ldots und sein Beweis.
-\end{proof}
-
-\begin{Theorem}[Wichtiger Satz]
-  \label{thm:wichtig}
-  Ein wichtiger Satz.
-\end{Theorem}
-
-\begin{proof}
-  Der Beweis folgt unter Verwendung der Erkenntnisse aus \vref{lem:hilfssatz}.
-\end{proof}
-
-\begin{Korollar}[Ein Geschenk]
-  Eine unmittelbare Folgerung.
-\end{Korollar}
-
-\begin{proof}
-  Die Folgerung folgt unmittelbar aus \vref{thm:wichtig}.
-\end{proof}
-
-\begin{Beispiel}
-  Ein Beispiel.
-\end{Beispiel}
-
-\begin{Bemerkung}
-  Beispiele und Bemerkungen werden nicht in das Verzeichnis der Theoreme und Definitionen aufgenommen.
-\end{Bemerkung}
-
-\section{Anführungszeichen}
-
-Malte sagt: \enquote{Fritz hat gesagt: \enquote{Man kann wörtliche Rede verschachteln.}}
-
-Anführungszeichen werden nur für wörtliche Rede oder direkt übernommene kurze Zitate verwendet. Für die Hervorhebung von neu eingeführten Fachbegriffen eignet sich \emph{kursiver Satz} besser.
+%\begin{itemize}
+%	\item Schreiben Sie pr�zise. Umschreiben Sie keine Sachverhalte, die Sie auch konkret benennen k�nnen.
+%	\item Dr�cken Sie sich m�glichst im Passiv aus (nicht "`man"'). Vermeiden Sie S�tze im Imperativ, Umgangssprache und unn�tige F�llw�rter.
+%	\item "`Laborslang"' und englische Begriffe vermeiden, z. B. nicht Set-up sondern Aufbau oder anstatt "`mit Zaubercocktail"' "`mit ROXS"'
+%	\item Erkl�ren Sie Abk�rzungen bei ihrer ersten Verwendung.
+%	\item Lateinische Begriffe immer kursiv, z. B. \textit{in vivo}.
+%	\end{itemize}

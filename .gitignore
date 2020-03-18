@@ -12,3 +12,4 @@ thesis.bbl
 *.gz
 *.tdo
 *.toc
+*.gz(busy)
