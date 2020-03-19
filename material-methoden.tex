@@ -51,22 +51,10 @@ In \vref{tbl:prozessoren} sehen wir ein Beispiel für eine Tabelle. Im Gegensatz
 
 \section{Abbildungen und Diagramme}
 
-In \vref{fig:flower} sehen wir ein Beispiel für eine Abbildung, die aus einer externen Grafik geladen wurde. In \vref{fig:buechi} sehen wir ein Beispiel für eine Abbildung, die in mit Hilfe von TiKz in \LaTeX\ generiert wurde.
+In \vref{fig:flower} sehen wir ein Beispiel für eine Abbildung, die aus einer externen Grafik geladen wurde. In \vref{fig:buechi} sehen wir ein Beispiel für eine Abbildung, die in mit Hilfe von TiKz in \LaTeX\ generiert wurde. Auf jede Abbildung und Tabelle muss mindestens einmal im Text verwiesen werden.
 
-%\item \textbf{Abbildungen und Tabellen:}\begin{itemize}
-%	\item Abbildungen und Tabellen werden fortlaufend nummeriert und immer beschriftet. 
-%	\item Die Beschriftung von Abbildungen erfolgt unterhalb der Abbildung. Die Beschriftung von Tabellen erfolgt oberhalb der Tabelle.
-%	\item Auf jede Abbildung und Tabelle wird mindestens einmal im Text verwiesen.
-%	\item Die Beschriftungen der Graphen sollten so ausf�hrlich sein, dass die Ergebnisse einer Arbeit auch nur mit den Bildern verst�ndlich sind!
 %	\item Von Anfang an auf die Gr��e von Graphen und deren Beschriftung achten (am besten ist, den Graph in der Gr��e zu erstellen, in der er ins Skript kommt). \textbf{Schriftgr��e} im Graphen an \textbf{Text anpassen}, nicht zu klein oder zu gro�!
 %	\end{itemize}
-%\item \textbf{Zitate und Quellenangaben:}\begin{itemize}
-%	\item W�rtlich �bernommene Texte werden durch Anf�hrungsstriche kenntlich gemacht und vom restlichen Text abgesetzt.
-%	\item Formulieren Sie nach M�glichkeit alles in eigenen Worten.
-%	\item Literaturstellen werden fortlaufend nummeriert und und in eckigen Klammern hinter die entsprechende Textstelle gesetzt (am Satzende vor dem Punkt). 
-%	\item Die Quellen stehen am Ende der Arbeit in einem Literaturverzeichnis in der Reihenfolge der vergebenen Nummern.
-%	\end{itemize}
-%\end{itemize}
 
 \begin{figure}
   \centering
@@ -120,36 +108,49 @@ Manchmal möchte man Quelltext eher als Abbildung und nicht als Fließtext behan
 
 Wenn man Quelltext mit Bildunterschrift setzt, muss man darauf achten, dass der Quelltext nach wie vor nicht als Fließumgebung behandelt wird. Entsprechend kann es passieren, dass der Quelltext über zwei Seiten hinweg gesetzt wird. Während das normalerweise nicht stört, kann dieser Umstand in Zusammenhang mit einer Bildunterschrift den Leser irritieren.
 
-\section{Formeln mit \pdfepsilon}
+\section{Zahlen und Einheiten}
 
-Das $\epsilon$ in der Überschrift dieses Abschnitts ist ein Beispiel für ein mathematisches Symbol, dass in den PDF-Lesezeichen als reiner Text gesetzt wird. Siehe \texttt{macros.tex}. In dieser Datei wird auch $n \in \N$ definiert.
+Physikalische Größen sind in Formeln und im Fließtext kursiv zu schreiben, z.B. die Temperatur $T$ und Zeit $t$. Der Index einer physikalischen Größe ist hingegen nicht kursiv zu schreiben, wenn es sich bei diesem Index um eine Variable handelt:
 
-Wir wissen aus der Analysis, dass
-\begin{align}
-  f(x) &= x^2 + px + q
-\end{align}
-Nullstellen bei
-\begin{align}
-  x_1 &= -\frac p2 + \sqrt{\frac{p^2}4 - q} \text{ und}\\
-  x_2 &= -\frac p2 - \sqrt{\frac{p^2}4 - q}
-\end{align}
-hat.
+\begin{compactitem}
+	\item Index ist Variable: z.B. $T_x$ oder $T_i$
+	\item Index ist keine Variable: z.B $T_{\rm{1}}$ oder $t_{\rm{off}}$
+\end{compactitem}
 
-%\item \textbf{Zahlen und Einheiten:}\begin{itemize}
-%	\item Physikalische \textbf{Gr��en} sind in Formeln und im Flie�text \textbf{kursiv}, z. B. Temperatur $T$ und Zeit $t$. 
-%	\item \textbf{Indices} von physikalischen Gr��en, die keine Variablen sind, sind \textbf{nicht kursiv}, z. B. $T_{\rm{1}}$, Zeit $t_{\rm{off}}$ (hingegen $T_x$ oder $T_i$). 
-%	\item Einheitenbehaftete Zahlen werden immer mit ihrer Einheit geschrieben.
-%	\item Zwischen Zahl und Einheit steht ein gesch�tztes Leerzeichen. Ein gesch�tztes Leerzeichen verhindert, dass Zahl und Einheit in unterschiedlichen Zeilen stehen und f�gt immer den gleichen Abstand zwischen Zahl und Einheit ein.
-%	\item \textbf{Einheiten} werden \textbf{nicht kursiv} geschrieben. 
-%	\item \textbf{Einheiten} werden bei der Beschriftung von Graphen oder in Tabellen \textbf{nicht in eckige Klammern} gesetzt. Bsp: $c$ in nM oder $c /$ mM!
-%	\end{itemize}
+Es empfiehlt sich, das Paket \textit{siunitx}\footnote{\url{http://ctan.mirror.garr.it/mirrors/CTAN/macros/latex/contrib/siunitx/siunitx.pdf}} für die Darstellung von Zahlen und zugehöriger Einheit zu verwenden. Damit lassen sich Zahlen und kompliziertere Einheiten übersichtlich darstellen, beispielsweise \SI{42}{\kilo\gram\metre\per\square\second}. Weiterhin ist zu beachten:
+
+\begin{compactitem}
+	\item einheitenbehaftete Zahlen werden immer mit der dazugehörigen Einheit genannt und geschrieben
+	\item Einheiten werden nicht kursiv geschrieben
+	\item Einheiten werden bei der Beschriftung von Graphen oder in Tabellen nicht in eckige Klammern gesetzt, sondern besser wie folgt dargestellt: $c$ in nM oder $c /$mM!
+\end{compactitem}
+
+\section{Formeln und Gleichungen}
+
+Formeln und Gleichungen sollten sich nach Möglichkeit in den Lesefluss einfügen und nicht immer nur am Ende des Satzes angehängt werden. Generell sind Gleichungen dabei wie Fließtext zu behandeln, was die Komma- und Punktsetzung betrifft. Außerdem sollten die einzelnen Bestandteile von Formeln und Gleichungen, wie Variablen und Konstanten, immer im Text vor oder nach der entsprechenden Gleichung kurz und knapp erklärt werden. Im Folgenden sind die zuvor genannten Punkte verdeutlicht (entnommen aus \cite{MA_Kappel}):
+
+
+Unter Verwendung der Bernoullischen Druckgleichung
+\begin{equation}
+	\label{eq:bernoulli_pressure}
+	p_{\text{s}} +  \varrho_{\text{s}} g z_{\text{s}} + \frac{1}{2} \varrho_{\text{s}} v^{2}_{\text{s}} = p_{\text{a}} + \varrho_{\text{a}} g z_{\text{a}} + \frac{1}{2} \varrho_{\text{a}} v^{2}_{\text{a}}
+\end{equation}
+kann ein alternativer Ausdruck für $ p_{s} $ gefunden werden. Hier stehen $ p_{\text{s}} $ und $ p_{\text{a}} $ für den Druck innerhalb der Spritze bzw. am Ausgang der Spritze, $ \varrho $ beschreibt die Dichte des Fluids, und $ v_{\text{s}} $ und $ v_{\text{a}} $ für die Geschwindigkeit des Fluids innerhalb der Spritze bzw. am Ausgang. 
+Die Lage, oder auch die geodätische Höhe, der Spritze und des Ausgangs wird hier mit $ z_{\text{a}} $ bzw. $ z_{\text{s}} $ beschrieben, und $ g $ steht für die Fallbeschleunigung im Schwerefeld der Erde.
+Aufgrund der Annahme, dass das verwendete Fluid inkompressibel ist, also $ \varrho_{\text{s}} = \varrho_{\text{a}} = \varrho = const. $ gilt, kann Gleichung \ref{eq:bernoulli_pressure} auch wie folgt geschrieben werden:
+\begin{equation}
+	\label{eq:bernoulli_pressure_rearranged}
+p_{\text{s}} +  \varrho g z_{\text{s}} + \frac{1}{2} \varrho v^{2}_{\text{s}} = p_{\text{a}} + \varrho g z_{\text{a}} + \frac{1}{2} \varrho v^{2}_{\text{a}} \, .
+\end{equation}
 
 \section{Hinweise zu Form und Stil}
 
-%\begin{itemize}
-%	\item Schreiben Sie pr�zise. Umschreiben Sie keine Sachverhalte, die Sie auch konkret benennen k�nnen.
-%	\item Dr�cken Sie sich m�glichst im Passiv aus (nicht "`man"'). Vermeiden Sie S�tze im Imperativ, Umgangssprache und unn�tige F�llw�rter.
-%	\item "`Laborslang"' und englische Begriffe vermeiden, z. B. nicht Set-up sondern Aufbau oder anstatt "`mit Zaubercocktail"' "`mit ROXS"'
-%	\item Erkl�ren Sie Abk�rzungen bei ihrer ersten Verwendung.
-%	\item Lateinische Begriffe immer kursiv, z. B. \textit{in vivo}.
-%	\end{itemize}
+Es ist auf einen präzisen Schreibstil zu achten. Umschreiben Sie keine Sachverhalte, die Sie auch konkret benennen können. Beachten Sie beim Verfassen Ihrer Arbeit außerdem diese weiteren Punkte:
+
+\begin{compactitem}
+	\item Drücken Sie sich möglichst im Passiv aus (nicht \frqq\textit{man} tut dies und jenes\flqq{}).
+	\item Vermeiden Sie Sätze im Imperativ, Umgangssprache und unnötige Füllwörter.
+	\item Es sollten \textit{Laborslang }und englische Begriffe vermieden werden, z.B. \frqq Aufbau\flqq{} statt \frqq Setup\flqq{} und \frqq ROXS\flqq{}  statt \frqq Zaubercocktail\flqq.
+	\item Erklären Sie Abkürzungen bei ihrer ersten Verwendung, und nehmen Sie diese in das Abkürzungsverzeichnis auf.
+	\item Lateinische Begriffe sollten immer kursiv dargestellt werden, wie z.B. \textit{in vivo}.
+\end{compactitem}
