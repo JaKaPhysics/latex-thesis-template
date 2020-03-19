@@ -24,7 +24,7 @@
   parskip=half,
   headings=big,
   BCOR=1cm,
-  %headsepline,
+  headsepline,
   %headsepline=0.5pt,
   chapterprefix=true,
   numbers=noendperiod,
@@ -32,6 +32,9 @@
 
 % do not align bottom of pages
 \raggedbottom
+
+% show page layout with \layout
+\usepackage{layout}
 
 % set table caption to be on top of tables
 \usepackage{floatrow}
@@ -83,6 +86,9 @@
 \setkomafont{pagenumber}{\normalfont\sffamily\color{maincolor}}
 \setkomafont{pageheadfoot}{\normalfont\sffamily}
 \setkomafont{headsepline}{\color{maincolor}}
+
+% set text height
+\setlength{\textheight}{1.05\textheight}
 
 % German guillemets quotes
 \usepackage[german=guillemets]{csquotes}
