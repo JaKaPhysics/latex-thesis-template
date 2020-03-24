@@ -5,7 +5,7 @@
 
 In diesem Abschnitt sollte konkret und nachvollziehbar beschrieben werden, wie die Untersuchungen durchgeführt wurden. So sollte zusätzlich zu einer Auflistung der verwendeten Materialien (Chemikalien und Geräte inkl. eventueller Messungenauigkeiten und Firmennamen) beschrieben werden, wie beispielsweise Proben hergestellt wurden (z.B. Konzentrationen, Verdünnungsreihen, etc.) und mit welchen Parametern Geräte verwendet wurden (z.B. erforderliche Zeit im Ultraschallbad, Porengröße der Extrudermembran). \textbf{Die durchgeführten  Arbeiten müssen hierbei durch andere reproduzierbar sein.}
 
-Die folgenden Abschnitte dieses Kapitels enthalten Beispiele für die diversen Inhaltselemente einer Arbeit.\todo{Die Abschnitte dieses Kapitels sollten natürlich nicht so in die Arbeit übernommen werden. Für die finale Version können diese Todo-Notes dann komplett aufgeblendet werden}
+Die folgenden Abschnitte dieses Kapitels enthalten Beispiele für die diversen Inhaltselemente einer Arbeit.\todo{Die Abschnitte dieses Kapitels sollten natürlich nicht so in die Arbeit übernommen werden. Für die finale Version können diese Todo-Notes dann komplett ausgeblendet werden}
 
 \todo[inline]{Notizen an einen selbst oder den Betreuer der Arbeit sind während der Arbeit sehr nützlich.}
 
@@ -30,10 +30,18 @@ In den meisten Fällen können Quellenangaben im Bib\TeX-Format direkt in versch
 
 \section{Tabellen}
 
-In \vref{tbl:prozessoren} sehen wir ein Beispiel für eine Tabelle. Im Gegensatz zu Abbildungen und Diagrammen ist die Beschriftung einer Tabelle immer oberhalb positioniert.
+In \vref{tbl:prozessoren} sehen wir ein Beispiel für eine Tabelle. Im Gegensatz zu Abbildungen und Diagrammen ist die Beschriftung einer Tabelle immer oberhalb positioniert. Es empfiehlt sich, die endgültige Positionierung der Grafiken und Tabellen erst ganz zum Schluss vorzunehmen (Feinschliff), da diese sich bei der Bearbeitung von Textstellen möglicherweise wieder verschieben.
 
 \begin{table}
-
+	% Positionierung der Tabellen und Grafiken
+	% \begin{table}[!htbp] erlaubt mehrere mögliche Positionen für die Tabelle
+	% [!] entfernt mögliche Restriktionen
+	% [h] Erlaubnis für hier im Text
+	% [t] Erlaubnis für top of site
+	% [b] Erlaubnis für bottom of site
+	% [p] Erlaubnis für single page
+	% [h!] erzwingt Position der Grafik/Tabelle an der Stelle, an der sie im Quelltext definiert ist
+	% es empfiehlt sich, zunächst die Option [htbp] zu verwenden 
   \centering
   \begin{tabular}{llr}
     \headerrow Jahr & Prozessor & MHz \\
@@ -57,6 +65,7 @@ In \vref{fig:flower} sehen wir ein Beispiel für eine Abbildung, die aus einer e
 %	\end{itemize}
 
 \begin{figure}
+	%\begin{figure}[htbp]
   \centering
   \pgfimage[width=.5\textwidth]{flower}
   \caption[Kurzfassung der Beschreibung für das Abbildungsverzeichnis]{Lange Version der Beschreibung, die direkt unter der Abbildung gesetzt wird. Es ist wichtig, für jede Abbildung eine umfangreiche Beschreibung anzugeben, da der Leser beim ersten Durchblättern der Arbeit vor allem an den Abbildungen hängen bleibt. Am Besten sollte so die Abbildung mit der dazugehörigen Bildunterschrift ohne weiteren Text verständlich sein und für sich alleine stehen können.}
