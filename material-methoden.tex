@@ -59,15 +59,12 @@ In \vref{tbl:prozessoren} sehen wir ein Beispiel für eine Tabelle. Im Gegensatz
 
 \section{Abbildungen und Diagramme}
 
-In \vref{fig:flower} sehen wir ein Beispiel für eine Abbildung, die aus einer externen Grafik geladen wurde. In \vref{fig:buechi} sehen wir ein Beispiel für eine Abbildung, die in mit Hilfe von TiKz in \LaTeX\ generiert wurde. Auf jede Abbildung und Tabelle muss mindestens einmal im Text verwiesen werden.
+In \vref{fig:flower} sehen wir ein Beispiel für eine Abbildung, die aus einer externen Grafik geladen wurde. In \vref{fig:buechi} sehen wir ein Beispiel für eine Abbildung, die in mit Hilfe von TiKz in \LaTeX\ generiert wurde. Auf jede Abbildung und Tabelle muss mindestens einmal im Text verwiesen werden. Es sollte von Anfang an die Größe der Graphen und deren Beschriftungen beachtet werden. Dazu wird der Graph am Besten in der gleichen Größe erstellt, in der er auch in die Arbeit eingefügt werden soll. Eine zu geringe Pixeldichte kann Abbildungen fleckig und verschwommen aussehen lassen. Die Größe der Beschriftungen in einem Graph sollte nicht zu groß oder zu klein gewählt werden, und sich möglichst an der Größe der Bildunterschrift orientieren um gut lesbar zu sein.
 
-%	\item Von Anfang an auf die Gr��e von Graphen und deren Beschriftung achten (am besten ist, den Graph in der Gr��e zu erstellen, in der er ins Skript kommt). \textbf{Schriftgr��e} im Graphen an \textbf{Text anpassen}, nicht zu klein oder zu gro�!
-%	\end{itemize}
 
-\begin{figure}
-	%\begin{figure}[htbp]
+\begin{figure} % optional: \begin{figure}[htbp]
   \centering
-  \pgfimage[width=.5\textwidth]{flower}
+  \includegraphics[width=.5\textwidth]{images/flower.png}
   \caption[Kurzfassung der Beschreibung für das Abbildungsverzeichnis]{Lange Version der Beschreibung, die direkt unter der Abbildung gesetzt wird. Es ist wichtig, für jede Abbildung eine umfangreiche Beschreibung anzugeben, da der Leser beim ersten Durchblättern der Arbeit vor allem an den Abbildungen hängen bleibt. Am Besten sollte so die Abbildung mit der dazugehörigen Bildunterschrift ohne weiteren Text verständlich sein und für sich alleine stehen können.}
   \label{fig:flower}
 \end{figure}
